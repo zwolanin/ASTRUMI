@@ -1,54 +1,31 @@
-# 🔮 K&T (Kamienie i Tarot) – Magiczny Sklep Internetowy
-
-Witaj w repozytorium projektu **K&T**! Jest to nowoczesna, w pełni responsywna strona internetowa stworzona dla sklepu oferującego kamienie szlachetne, kadzidła i akcesoria ezoteryczne.
-
-![Banner](https://images.unsplash.com/photo-1567605690379-257e3119011f?auto=format&fit=crop&w=1200&q=80)
-
-## 📖 O Projekcie
-
-Celem projektu było stworzenie estetycznej i funkcjonalnej wizytówki sklepu z możliwością składania zamówień bez konieczności wdrażania skomplikowanego backendu czy systemów płatności. Strona łączy w sobie elegancję, mistycyzm i nowoczesne technologie webowe.
-
-Strona działa jako **aplikacja typu SPA (Single Page Application)** w kontekście koszyka i przeglądania produktów, choć oparta jest na klasycznej strukturze plików HTML.
-
-## 🛠️ Technologie
-
-Projekt został zbudowany przy użyciu czystych technologii webowych, stawiając na wydajność i prostotę modyfikacji.
-
-*   **HTML5** – Semantyczna struktura strony.
-*   **CSS3** – Nowoczesne style:
-    *   Zmienne CSS (Custom Properties) dla łatwej zmiany motywu.
-    *   Flexbox & Grid Layout dla responsywności.
-    *   Efekt **Glassmorphism** (półprzezroczyste panele).
-    *   Animacje i przejścia (transitions).
-*   **JavaScript (ES6+)** – Logika biznesowa:
-    *   Renderowanie produktów z bazy danych (plik JS).
-    *   Obsługa koszyka (dodawanie, usuwanie, sumowanie).
-    *   **LocalStorage** – zapisywanie zawartości koszyka w przeglądarce użytkownika.
-*   **EmailJS** – System obsługi zamówień on-line (wysyłka maili bez backendu).
-
-## 🌟 Główne Funkcjonalności
-
-### 🛍️ Sklep i Produkty
-*   Dynamiczne generowanie listy produktów.
-*   Filtrowanie produktów po kategoriach (Kamienie, Kadzidła, Wszystkie).
-*   Przejrzyste karty produktów ze zdjęciami i cenami.
-
-### 🛒 Inteligentny Koszyk
-*   Dodawanie produktów do koszyka jednym kliknięciem.
-*   Agregacja produktów (zliczanie sztuk tego samego produktu).
-*   Możliwość usuwania produktów.
-*   Zapamiętywanie zawartości koszyka po odświeżeniu strony.
-
-### 🚚 System Zamówień i Dostaw
-*   Automatyczne obliczanie kosztów dostawy:
-    *   **15.00 PLN** dla zamówień poniżej 150 PLN.
-    *   **Darmowa dostawa (0.00 PLN)** dla zamówień powyżej 150 PLN.
-*   Formularz zamówienia z walidacją danych.
-
-### 📧 Powiadomienia Email (EmailJS)
-*   Automatyczne potwierdzenie zamówienia dla klienta.
-*   Powiadomienie o nowym zamówieniu dla sprzedawcy.
-*   Elegancki szablon HTML wiadomości zawierający podsumowanie zamówienia i dane do płatności.
-
+# ASTRUMI – Magia Kamieni i Kadzideł
+Modern Witchcraft & Gemstones Store
+Witaj w repozytorium projektu ASTRUMI. Jest to nowoczesny sklep internetowy stworzony z pasji do ezoteryki, minerałów i naturalnych kadzideł. Projekt wyróżnia się unikalnym designem łączącym estetykę Witchy Vibes z nowoczesnymi trendami webowymi.
+## Główne Funkcje
+*   **Dynamiczny Design**: Tło z generowanymi proceduralnie, migoczącymi gwiazdami (JS) i efekt Glassmorphism (szkło).
+*   **Koszyk Zakupowy**: Pełna obsługa dodawania/usuwania produktów i podliczania sumy zamówienia. System oparty na LocalStorage, więc koszyk "pamięta" zawartość po odświeżeniu strony.
+*   **Backendless Orders**: Składanie zamówień i zapis na newsletter odbywa się bez tradycyjnego serwera – wykorzystano API EmailJS do bezpośredniej komunikacji.
+*   **Moduł Zodiakalny**: Interaktywna sekcja dopasowująca kamienie do znaków zodiaku Zachodniego i Chińskiego.
+*   **Responsywność**: Strona w pełni dostosowana do urządzeń mobilnych (RWD).
+## Technologie
+Projekt został zbudowany zgodnie z filozofią Lightweight Performance i Clean Code:
+*   **HTML5** – Semantyczna struktura.
+*   **CSS3** – Zmienne CSS, Flexbox, Grid, Animacje Keyframes.
+*   **JavaScript (ES6+)** – Logika koszyka, obsługa przypomnień (SessionStorage), generowanie DOM, API.
+*   **EmailJS** – Integracja formularzy i automatyzacja e-maili bez backendu.
+## Jak uruchomić projekt?
+Wystarczy pobrać pliki i otworzyć index.html w dowolnej przeglądarce!
+Projekt nie wymaga instalacji Node.js ani bazy danych. Działa od razu z pudełka ("Plug & Play").
+### Struktura Plików
+*   index.html – Strona główna (Hero, Kamień Miesiąca).
+*   sklep.html – Lista produktów z filtrowaniem i newsletterem.
+*   koszyk.html – Podsumowanie zamówienia i formularz wysyłki.
+*   zodiak.html – Baza wiedzy o znakach zodiaku.
+*   style.css – Główny arkusz stylów (Globalne zmienne, RWD).
+*   skrypt.js – Logika aplikacji (Koszyk, Gwiazdy, EmailJS).
+*   dane.js – Baza danych produktów w formacie JSON.
+## Autor
+**Zuzanna Wolanin**
+Design, Development & Magic
 ---
-Moc natury w nowoczesnym wydaniu. ✨
+(c) 2026 ASTRUMI. Wszelkie prawa zastrzeżone.
