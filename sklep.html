@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - ASTRUMI</title>
+    <link rel="icon" type="image/png" href="zdjecia/Favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS SDK - Wymagane do Newslettera -->
+    <!-- Konfiguracja EmailJS (wymagane tutaj, bo jest formularz Newslettera) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Inicjalizacja z Public Key użytkownika
+            emailjs.init("x58tg4EfJxOyCAuol");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="zdjecia/Logo.png" alt="ASTRUMI Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="zodiak.html">Zodiak i Wiedza</a></li>
+                <li><a href="koszyk.html">Koszyk <span id="licznik-koszyka">(0)</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 2rem;">Nasze Produkty</h2>
+
+        <!-- FILTRY -->
+        <!-- FILTRY KATEGORII -->
+        <!-- atrybut 'data-kategoria' jest czytany przez JS do filtrowania tablicy produktów -->
+        <div class="filtry">
+            <button class="aktywny" data-kategoria="wszystkie">Wszystkie</button>
+            <button data-kategoria="kamienie">Kamienie</button>
+            <button data-kategoria="kadzidla">Kadzidła</button>
+        </div>
+
+        <!-- SIATKA PRODUKTÓW -->
+        <!-- KONTENER NA PRODUKTY -->
+        <!-- To miejsce jest puste w HTML. JavaScript wypełnia je kartami produktów (Render) -->
+        <div id="lista-produktow" class="siatka-produktow">
+            <!-- Produkty będą wstawiane tutaj przez JavaScript -->
+        </div>
+
+        <!-- NEWSLETTER -->
+        <!-- FORMULARZ NEWSLETTERA -->
+        <section style="margin-top: 4rem; padding: 2rem; background: var(--glass-bg); border-radius: 10px; text-align: center; border: 1px solid var(--glass-border);">
+            <h3>Zapisz się do Newslettera</h3>
+            <p style="margin-bottom: 1.5rem; color: #ccc;">Otrzymuj informacje o nowościach, horoskopy i magiczne porady prosto na maila.</p>
+            <!-- ID 'newsletter-form' jest nasłuchiwane w skrypt.js -->
+            <form id="newsletter-form" style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" id="newsletter-email" placeholder="Twój adres email" required 
+                       style="flex: 1; padding: 0.8rem; border-radius: 5px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.3); color: white;">
+                <button type="submit" class="btn">Zapisz się</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ASTRUMI - Zuzanna Wolanin. Wszelkie prawa zastrzeżone.</p>
+        <p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Magia Kamieni i Kadzideł</p>
+    </footer>
+
+    <script src="dane.js"></script>
+    <script src="skrypt.js"></script>
+</body>
+
+</html>

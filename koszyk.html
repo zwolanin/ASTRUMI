@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twój Koszyk - ASTRUMI</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS SDK - Wymagane do wysyłania maili -->
+    <!-- Konfiguracja EmailJS (niezbędna do wysłania zamówienia) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Inicjalizacja z Public Key użytkownika
+            emailjs.init("x58tg4EfJxOyCAuol");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="zdjecia/Logo.png" alt="ASTRUMI Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="zodiak.html">Zodiak i Wiedza</a></li>
+                <li><a href="koszyk.html">Koszyk <span id="licznik-koszyka">(0)</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 2rem;">Twój Koszyk</h2>
+
+        <!-- TABELA KOSZYKA -->
+        <table class="tabela-koszyka">
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Cena</th>
+                    <th>Ilość</th>
+                    <th>Akcja</th>
+                </tr>
+            </thead>
+            <!-- ID 'tabela-koszyka-body' jest używane przez skrypt.js do generowania wierszy (loop) -->
+            <tbody id="tabela-koszyka-body">
+                <!-- Elementy koszyka z JS -->
+            </tbody>
+        </table>
+
+        <!-- SUMA CAŁKOWITA -->
+        <div style="text-align: right; margin-bottom: 3rem; font-size: 1.5rem;">
+            Suma: <span id="suma-koszyka" style="color: var(--accent-color); font-weight: bold;">0.00 PLN</span>
+        </div>
+
+        <!-- FORMULARZ ZAMÓWIENIA -->
+        <!-- FORMULARZ ZAMÓWIENIA -->
+        <!-- ID 'formularz-zamowienia' jest kluczowe dla obsługi zdarzenia 'submit' w JS -->
+        <h3 style="text-align: center; margin-bottom: 1.5rem;">Dane do wysyłk</h3>
+        <form id="formularz-zamowienia" class="formularz-zamowienia">
+            <div class="grupa-formularza">
+                <label for="imie">Imię i Nazwisko</label>
+                <input type="text" id="imie" required placeholder="np. Anna Nowak">
+            </div>
+
+            <div class="grupa-formularza">
+                <label for="email">Adres Email</label>
+                <input type="email" id="email" required placeholder="np. anna@example.com">
+            </div>
+
+            <div class="grupa-formularza">
+                <label for="adres">Adres Dostawy</label>
+                <textarea id="adres" rows="3" required placeholder="Ulica, numer, kod pocztowy, miasto"></textarea>
+            </div>
+
+            <div class="grupa-formularza">
+                <label for="wiadomosc">Wiadomość do sprzedawcy (opcjonalne)</label>
+                <textarea id="wiadomosc" rows="2"></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Wyślij Zamówienie</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ASTRUMI - Zuzanna Wolanin. Wszelkie prawa zastrzeżone.</p>
+        <p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Magia Kamieni i Kadzideł</p>
+    </footer>
+
+    <script src="dane.js"></script>
+    <script src="skrypt.js"></script>
+</body>
+
+</html>

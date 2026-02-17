@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiak i Wiedza - ASTRUMI</title>
+    <link rel="icon" type="image/png" href="zdjecia/Favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="zdjecia/Logo.png" alt="ASTRUMI Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="zodiak.html">Zodiak i Wiedza</a></li>
+                <li><a href="koszyk.html">Koszyk <span id="licznik-koszyka">(0)</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sekcja-zodiak">
+            <h1>Znaki Zodiaku (Zachodnie)</h1>
+            <p style="margin-bottom: 2rem; color: #ccc;">Znajdź swój znak i przypisany mu kamień mocy.</p>
+
+            <!-- ZNAKI ZACHODNIE (Baran, Byk...) -->
+            <!-- ID 'lista-zodiak' jest używane w skrypt.js do wygenerowania kart (pobiera dane z zodiakZachodni) -->
+            <div id="lista-zodiak" class="karty-zodiaku">
+                <!-- Generowane przez JS -->
+            </div>
+        </section>
+
+        <hr style="border-color: var(--glass-border); margin: 3rem 0;">
+
+        <section class="sekcja-zodiak">
+            <h1>Chińskie Znaki Zodiaku</h1>
+            <p style="margin-bottom: 2rem; color: #ccc;">Sprawdź swój rok urodzenia i odkryj swoje chińskie zwierzę mocy.</p>
+            <!-- ZNAKI CHIŃSKIE (Szczur, Bawół...) -->
+            <!-- ID 'lista-zodiak-chinski' jest używane w skrypt.js do wygenerowania kart (pobiera dane z zodiakChinski) -->
+            <div id="lista-zodiak-chinski" class="karty-zodiaku">
+                <!-- Generowane przez JS -->
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ASTRUMI - Zuzanna Wolanin. Wszelkie prawa zastrzeżone.</p>
+        <p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Magia Kamieni i Kadzideł</p>
+    </footer>
+
+    <script src="dane.js"></script>
+    <script src="skrypt.js"></script>
+</body>
+
+</html>
