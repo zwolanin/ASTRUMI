@@ -26,6 +26,5 @@ Projekt nie wymaga instalacji Node.js ani bazy danych. Działa od razu z pudełk
 *   dane.js – Baza danych produktów w formacie JSON.
 ## Autor
 **Zuzanna Wolanin**
-Design, Development & Magic
 ---
 (c) 2026 ASTRUMI. Wszelkie prawa zastrzeżone.
